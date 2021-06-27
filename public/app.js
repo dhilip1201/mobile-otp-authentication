@@ -2,7 +2,7 @@ const loginForm = document.getElementById("login-form");
 const codeInput = document.getElementById("codeInput");
 let mobileNumber;
 let isOTPDelivered = false;
-const baseUrl = `http://localhost:2000/`;
+const baseUrl = `https://mobile-otp-authetication.herokuapp.com/`;
 loginForm.addEventListener("submit", async (e)=>{
     e.preventDefault();
     mobileNumber = parseInt(document.getElementById('phoneInput').value);
