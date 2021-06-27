@@ -8,15 +8,18 @@ const serviceId = "VA1065707f3fb298c2214cee232783c179"
 const client = require('twilio')(accountSid, authToken);
 
 
-
-
-app.use(express.static("public"));
+// app.use(express.static("public"));
 app.use(express.json());
 
 
+// app.get("/",(req,res)=>{
+// res.sendFile(__dirname + "/public/index.html")
+// });
 app.get("/",(req,res)=>{
-res.sendFile(__dirname + "/public/index.html")
-});
+  res.status(200).json({
+    message:'Welcome to our OTP server'
+  })
+})
 
 app.post("/send-verification-otp",(req,res) => {
 
